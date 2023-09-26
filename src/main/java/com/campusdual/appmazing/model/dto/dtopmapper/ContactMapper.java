@@ -1,0 +1,16 @@
+package com.campusdual.appmazing.model.dto.dtopmapper;
+
+import com.campusdual.appmazing.model.Contact;
+import com.campusdual.appmazing.model.dto.ContactDTO;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
+
+import java.util.List;
+
+@Mapper
+public interface ContactMapper {
+    ContactMapper INSTANCE = Mappers.getMapper(ContactMapper.class);
+    ContactDTO toDTO(Contact contact);
+    List<ContactDTO> toDTO(List<Contact> contacs);
+    Contact toEntity(ContactDTO contactDTO);
+}
