@@ -13,6 +13,8 @@ public class Contact {
     @Column
     private String name;
     @Column
+    private String middlename;
+    @Column
     private String lastname;
     @Column
     private double phone;
@@ -33,6 +35,14 @@ public class Contact {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getMiddlename() {
+        return middlename;
+    }
+
+    public void setMiddlename(String middlename) {
+        this.middlename = middlename;
     }
 
     public String getLastname() {
