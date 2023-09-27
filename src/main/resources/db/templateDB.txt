@@ -28,7 +28,7 @@ SET FILES NIO TRUE
 SET FILES NIO SIZE 256
 SET FILES LOG TRUE
 SET FILES LOG SIZE 50
-SET FILES CHECK 2929
+SET FILES CHECK 2990
 SET DATABASE COLLATION "SQL_TEXT" PAD SPACE
 CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
 ALTER USER SA SET LOCAL TRUE
@@ -57,7 +57,7 @@ INSERT INTO PRODUCTS VALUES(6,'Oranges',425,1.89,'1','2023-01-01')
 INSERT INTO CONTACTS VALUES(1,'Peter','Griffin','Smith',654654654,'peterg@hotmail.com')
 INSERT INTO CONTACTS VALUES(2,'Paco','Porras','Perez',987456852,'pporras@hotmail.com')
 INSERT INTO CONTACTS VALUES(3,'Jhonny','Bravo','Lopez',123456789,'jhonnybrave@hotmail.com')
-INSERT INTO CONTACTS VALUES(4,'Chicho','Terremoto','Ni\u00f1o',666444666,'terremoto.chicho@hotmail.com')
+INSERT INTO CONTACTS VALUES(4,'Chicho','Terremoto','Nino',666444666,'terremoto.chicho@hotmail.com')
 INSERT INTO CONTACTS VALUES(5,'Julio','Cesar','Bruto',984985986,'avecesar.fan1@hotmail.com')
 INSERT INTO CONTACTS VALUES(6,'Pinky','Cerebro','Dibujo',666666666,'pinkycerebro@hotmail.com')
 INSERT INTO CONTACTS VALUES(7,'Bugs','Bunny','Tune',123454321,'looneybugs@gmail.com')
