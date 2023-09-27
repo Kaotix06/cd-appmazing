@@ -22,27 +22,28 @@ public class ProductService implements IProductService {
     public ProductDTO queryProduct(ProductDTO productDTO) {
         Product product = ProductMapper.INSTANCE.toEntity(productDTO);
         Product productFinal = this.productDao.getReferenceById(product.getId());
-        ProductDTO dto = ProductMapper.INSTANCE.toDTO(productFinal);
-        return null;
+        return ProductMapper.INSTANCE.toDTO(productFinal);
     }
 
     @Override
     public List<ProductDTO> queryAllProducts() {
-        return null;
+        return ProductMapper.INSTANCE.toDTOList(this.productDao.findAll());
     }
 
     @Override
-    public int insertProduct(ProductDTO product) {
+    public int insertProduct(ProductDTO productDTO) {
+        Product product = ProductMapper.INSTANCE.toEntity(productDTO);
+        this.productDao.saveAndFlush(product);
+        return product.getId();
+    }
+
+    @Override
+    public int updateProduct(ProductDTO productDTO) {
         return 0;
     }
 
     @Override
-    public int updateProduct(ProductDTO product) {
-        return 0;
-    }
-
-    @Override
-    public int deleteProduct(ProductDTO product) {
+    public int deleteProduct(ProductDTO productDTO) {
         return 0;
     }
 }
