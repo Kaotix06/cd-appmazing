@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service("ProductService")
@@ -33,17 +34,21 @@ public class ProductService implements IProductService {
     @Override
     public int insertProduct(ProductDTO productDTO) {
         Product product = ProductMapper.INSTANCE.toEntity(productDTO);
+        product.setPrice(product.getPrice().add(new BigDecimal(1)));
         this.productDao.saveAndFlush(product);
         return product.getId();
     }
 
     @Override
     public int updateProduct(ProductDTO productDTO) {
-        return 0;
+        return this.insertProduct(productDTO);
     }
 
     @Override
     public int deleteProduct(ProductDTO productDTO) {
-        return 0;
+        int id = productDTO.getId();
+        Product product = ProductMapper.INSTANCE.toEntity(productDTO);
+        productDao.delete(product);
+        return id;
     }
 }
