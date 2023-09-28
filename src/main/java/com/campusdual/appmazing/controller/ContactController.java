@@ -49,4 +49,9 @@ public class ContactController {
     public int updateContact(@RequestBody ContactDTO contact){
         return this.contactService.updateContact(contact);
     }
+
+    @DeleteMapping(value = "/delete")
+    public int deleteContact(@RequestBody ContactDTO contact){
+        return this.contactService.deleteContact(contact);
+    }
 }

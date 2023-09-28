@@ -47,5 +47,8 @@ public class ProductController {
     public int updateProduct(@RequestBody ProductDTO product){
         return this.productService.updateProduct(product);
     }
-
+    @DeleteMapping(value = "/delete")
+    public int deleteProduct(@RequestBody ProductDTO product){
+        return this.productService.deleteProduct(product);
+    }
 }
