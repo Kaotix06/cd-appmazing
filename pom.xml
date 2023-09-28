@@ -52,6 +52,27 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>${maven-antrun-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>configure_database</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<available file="${hsqldatabase.path}/templeateDB.script" property="database.exist"/>
+								<echo message="${hsqldatabase.path}/templateDB.scritp"/>
+								<copy tofile="${hsqldatabase.path}/templateDB.script" file="${hsqldatabase.path}/templateDB.txt"/>
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
@@ -62,27 +83,6 @@
 			<id>run_database</id>
 			<build>
 				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-antrun-plugin</artifactId>
-						<version>${maven-antrun-plugin.version}</version>
-						<executions>
-							<execution>
-								<id>configure_database</id>
-								<phase>validate</phase>
-								<goals>
-									<goal>run</goal>
-								</goals>
-								<configuration>
-									<target>
-										<available file="${hsqldatabase.path}/templeateDB.script" property="database.exist"/>
-										<echo message="${hsqldatabase.path}/templateDB.scritp"/>
-										<copy tofile="${hsqldatabase.path}/templateDB.script" file="${hsqldatabase.path}/templateDB.txt"/>
-									</target>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>exec-maven-plugin</artifactId>
