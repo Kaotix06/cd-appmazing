@@ -39,4 +39,14 @@ public class ContactController {
     public List<ContactDTO> queryAllContacts(){
         return this.contactService.queryAllContacts();
     }
+
+    @PostMapping(value = "/add")
+    public int insertContact(@RequestBody ContactDTO contact){
+        return this.contactService.insertContact(contact);
+    }
+
+    @PutMapping(value = "/update")
+    public int updateContact(@RequestBody ContactDTO contact){
+        return this.contactService.updateContact(contact);
+    }
 }

@@ -34,7 +34,7 @@ public class ProductService implements IProductService {
     @Override
     public int insertProduct(ProductDTO productDTO) {
         Product product = ProductMapper.INSTANCE.toEntity(productDTO);
-        product.setPrice(product.getPrice().add(new BigDecimal(1)));
+//        product.setPrice(product.getPrice().add(new BigDecimal(1)));
         this.productDao.saveAndFlush(product);
         return product.getId();
     }
