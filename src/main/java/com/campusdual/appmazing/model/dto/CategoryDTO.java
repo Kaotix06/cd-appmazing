@@ -1,14 +1,9 @@
-package com.campusdual.appmazing.model;
+package com.campusdual.appmazing.model.dto;
 
-import javax.persistence.*;
+public class CategoryDTO {
 
-@Entity
-@Table(name = "CATEGORYS")
-public class Category {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column
+
     private String name;
 
     public int getId() {
