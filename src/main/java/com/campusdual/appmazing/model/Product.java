@@ -26,6 +26,8 @@ public class Product {
     private Boolean active;
     @Column
     private Date date_added;
+    @Column
+    private int category_id;
 
     public int getId() {
         return id;
@@ -73,5 +75,13 @@ public class Product {
 
     public void setDate_added(Date date_added) {
         this.date_added = date_added;
+    }
+
+    public int getCategory_id() {
+        return category_id;
+    }
+
+    public void setCategory_id(int category_id) {
+        this.category_id = category_id;
     }
 }
