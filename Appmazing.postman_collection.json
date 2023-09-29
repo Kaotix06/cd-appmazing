@@ -1,0 +1,351 @@
+{
+	"info": {
+		"_postman_id": "84f0370f-0774-4f79-82ec-c426fe7a1630",
+		"name": "Appmazing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29607771"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product -R",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/products/get",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product -C",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Olive oil\",\r\n    \"stock\": 126,\r\n    \"price\": 4.45,\r\n    \"active\": true,\r\n    \"date_added\": \"2023-01-01T23:00:00.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/products/add",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product All -R",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:30030/products/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product -U",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Olive oil\",\r\n    \"stock\": 125,\r\n    \"price\": 14.45,\r\n    \"active\": true,\r\n    \"date_added\": \"2023-01-01T23:00:00.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/products/update",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product -D",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/products/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Contact -D",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/contacts/delete",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"contacts",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact -U",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Olive oil\",\r\n    \"stock\": 125,\r\n    \"price\": 14.45,\r\n    \"active\": true,\r\n    \"date_added\": \"2023-01-01T23:00:00.000+00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/contacts/update",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"contacts",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact -C",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Oliver\",\r\n    \"middlename\": \"Benji\",\r\n    \"lastname\": \"Aton\",\r\n    \"phone\": 987321987,\r\n    \"email\": \"oliverbaton@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/contacts/add",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"contacts",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact All -R",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:30030/contacts/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"contacts",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contact -R",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/contacts/get",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"contacts",
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Test Controller -R",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:30030/products",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Controller -R",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "nestor",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/products",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Controller Method -R",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:30030/products/testMethod",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products",
+								"testMethod"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
