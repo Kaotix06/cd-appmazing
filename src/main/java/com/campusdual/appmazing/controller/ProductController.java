@@ -67,10 +67,10 @@ public class ProductController {
         productDTO.setId(body.get("id"));
         return this.productService.buyProduct(productDTO,quantity);
     }
-//    @PostMapping(value= "/buyandshowprice")
-//    public BigDecimal buyProductAndShowPrice(@RequestBody ProductDTO productDTO) {
-//        int quantity = 5;
-//        this.productService.buyProduct(productDTO, quantity);
-//        return this.productService.calculateTotalPrice(productDTO, quantity);
-//    }
+    @PostMapping(value= "/buyandshowprice")
+    public BigDecimal buyProductAndShowPrice(@RequestBody ProductDTO productDTO) {
+        int quantity = 5;
+        this.productService.buyProduct(productDTO, quantity);
+        return this.productService.calculateTotalPrice(productDTO, quantity);
+    }
 }

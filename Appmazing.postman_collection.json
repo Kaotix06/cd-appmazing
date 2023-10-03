@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 2\r\n}",
+							"raw": "{\r\n    \"id\": 6\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -32,6 +32,34 @@
 							"path": [
 								"products",
 								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Product buy and show price",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 7\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/products/buyandshowprice",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products",
+								"buyandshowprice"
 							]
 						}
 					},
@@ -91,7 +119,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Olive oil\",\r\n    \"stock\": 125,\r\n    \"price\": 14.45,\r\n    \"active\": true,\r\n    \"date_added\": \"2023-01-01T23:00:00.000+00:00\"\r\n}",
+							"raw": "{\r\n    \"id\": 7,\r\n    \"name\": \"Olive oil\",\r\n    \"stock\": 125,\r\n    \"price\": 14.45,\r\n    \"active\": true,\r\n    \"date_added\": \"2023-01-01T23:00:00.000+00:00\",\r\n    \"category_id\": 6\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -139,6 +167,34 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Product Buy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 3,\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:30030/products/buy",
+							"host": [
+								"localhost"
+							],
+							"port": "30030",
+							"path": [
+								"products",
+								"buy"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -180,7 +236,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Ice Cream\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Oil\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
