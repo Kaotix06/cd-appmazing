@@ -49,4 +49,5 @@ public class ContactService implements IContactService {
         contactDao.delete(contact);
         return id;
     }
+
 }
