@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("ContactServise")
+@Service("ContactService")
 @Lazy
 public class ContactService implements IContactService {
 
@@ -49,4 +49,5 @@ public class ContactService implements IContactService {
         contactDao.delete(contact);
         return id;
     }
+
 }

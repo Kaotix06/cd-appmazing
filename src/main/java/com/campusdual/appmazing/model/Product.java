@@ -1,13 +1,10 @@
 package com.campusdual.appmazing.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.campusdual.appmazing.model.dto.CategoryDTO;
+
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 
 @Entity
 @Table(name = "PRODUCTS")
@@ -26,6 +23,9 @@ public class Product {
     private Boolean active;
     @Column
     private Date date_added;
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
 
     public int getId() {
         return id;
@@ -73,5 +73,13 @@ public class Product {
 
     public void setDate_added(Date date_added) {
         this.date_added = date_added;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
